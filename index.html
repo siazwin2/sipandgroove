@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sip&Groove — Sounds For The Everyday</title>
+<meta name="description" content="Sip&Groove — Urban Music Inspired By Real Life In Jakarta.">
+<meta name="theme-color" content="#11100e">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+:root{--bg:#11100e;--ink:#f1e8db;--muted:#b8ad9f;--line:#37312a;--panel:#191714;--gold:#d6b47d;--green:#0e3a2a;--max:1260px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.55}a{text-decoration:none;color:inherit}
+.wrap{width:min(calc(100% - 56px),var(--max));margin:auto}
+.nav{position:fixed;z-index:50;top:0;left:0;right:0;padding:16px 0;background:linear-gradient(180deg,rgba(17,16,14,.95),rgba(17,16,14,.3),transparent)}.nav-in{display:flex;align-items:center;justify-content:space-between}.logo{width:125px}.logo img{display:block;width:100%}.navlinks{display:flex;gap:30px;font-size:14px}.navlinks a{color:#e5ddd1;opacity:.86}.navlinks a:hover,.navlinks a.active{color:var(--gold);opacity:1}.menu{display:none}
+.hero{min-height:94vh;display:flex;align-items:center;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,8,6,.94) 0%,rgba(10,8,6,.78) 34%,rgba(10,8,6,.28) 68%,rgba(10,8,6,.34)),linear-gradient(0deg,rgba(10,8,6,.78),transparent 42%),url("assets/CoffeShop-Typing(1).webp") left center/110% auto no-repeat}.hero-content{position:relative;z-index:2;width:58%;padding:100px 0 50px;transform:translateX(-170px)}.eyebrow,.kicker{font-size:12px;letter-spacing:.1em;color:var(--gold);margin-bottom:14px}.hero h1{font:600 clamp(54px,7.2vw,94px)/.94 "Playfair Display",serif;letter-spacing:-.045em;max-width:650px;margin:0 0 25px}.lead{font-size:18px;color:#e0d7cb;max-width:610px}.btn{display:inline-flex;gap:10px;align-items:center;margin-top:24px;border:1px solid rgba(241,232,219,.35);border-radius:999px;padding:12px 18px;font-weight:600;font-size:14px;transition:.2s}.btn:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+section{padding:108px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:34px}.section-head h2{font:600 clamp(38px,4.8vw,62px)/1.03 "Playfair Display",serif;letter-spacing:-.03em;margin:0 0 12px}.section-head .sub{max-width:530px;color:var(--muted);margin:0}
+.music-option{display:grid;grid-template-columns:1.05fr .95fr 1fr;gap:42px;align-items:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:34px 0}.music-intro h3{font:600 clamp(40px,4.8vw,66px)/.98 "Playfair Display",serif;letter-spacing:-.035em;margin:0 0 18px;max-width:520px}.music-intro p{color:var(--muted);max-width:420px;margin:0}.music-intro .btn{margin-top:22px}.feature-art{aspect-ratio:1.34/1;overflow:hidden;background:#201c18;border:1px solid var(--line)}.feature-art img{width:100%;height:100%;object-fit:cover;display:block}.feature-info{padding-left:2px}.feature-number{font-size:12px;color:var(--gold);margin-bottom:14px}.feature h3{font:600 clamp(34px,3.2vw,50px)/1.03 "Playfair Display",serif;margin:7px 0 10px;letter-spacing:-.025em}.feature p{color:var(--muted);max-width:430px;margin:0}.feature-selectors{display:flex;gap:7px;flex-wrap:wrap;margin-top:28px;max-height:74px;overflow:auto;padding-right:4px}.selector{width:39px;height:30px;border:1px solid var(--line);background:transparent;color:var(--muted);font:600 11px "DM Sans",sans-serif;cursor:pointer;flex:0 0 auto}.selector.active,.selector:hover{border-color:var(--gold);color:var(--ink);background:#1b1814}.music-browse{margin-top:46px}.music-browse .section-head{margin-bottom:24px}.story-full p{font-size:15px;line-height:1.7;color:#d8cec2;margin:0 0 16px}.story-full .story-lead{font:500 24px/1.25 "Playfair Display",serif;color:var(--ink);margin-bottom:20px}
+.music-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.music-card{background:var(--panel);border:1px solid var(--line);overflow:hidden;transition:transform .2s,border-color .2s}.music-card:hover{transform:translateY(-3px);border-color:#554a3c}.music-art{aspect-ratio:1.48/1;overflow:hidden;position:relative}.music-art img{width:100%;height:100%;object-fit:cover;display:block}.num{position:absolute;left:12px;top:12px;padding:4px 7px;border:1px solid rgba(255,255,255,.22);border-radius:5px;background:rgba(17,16,14,.68);font-size:11px;color:var(--gold)}.music-info{padding:13px 15px 14px;min-height:112px;display:flex;flex-direction:column}.music-title{font-weight:700;font-size:15px;line-height:1.25;margin-bottom:5px}.music-desc{font-size:12px;color:var(--muted);line-height:1.4}.music-action{margin-top:auto;padding-top:9px;font-size:12px;font-weight:700;color:var(--gold)}.soon{color:#8f887f}.filter-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{font:inherit;background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:12px;cursor:pointer}.filter.active,.filter:hover{color:var(--ink);border-color:var(--gold)}
+.stories-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.story{height:290px;position:relative;overflow:hidden;border:1px solid var(--line);background:#191714}.story:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,7,5,.05) 20%,rgba(8,7,5,.88) 100%),var(--story) center/cover no-repeat;transition:transform .5s}.story:hover:before{transform:scale(1.04)}.story-content{position:absolute;z-index:1;inset:auto 18px 17px}.story .num{position:absolute;left:18px;top:16px}.story h3{font:500 25px/1.05 "Playfair Display",serif;margin:0 0 8px}.story p{font-size:12px;color:#d3c8ba;margin:0}.read{display:inline-block;margin-top:12px;font-size:12px;color:var(--gold);font-weight:700}
+.playlists{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.playlist{min-height:215px;position:relative;overflow:hidden;border:1px solid var(--line);padding:22px;background:linear-gradient(135deg,#211b15,#13110f);cursor:pointer;transition:.2s}.playlist:hover{transform:translateY(-3px);border-color:#6a573d}.playlist:after{content:"↗";position:absolute;right:20px;top:18px;color:var(--gold);font-size:18px}.playlist .kicker{margin-bottom:55px}.playlist h3{font:500 28px/1.08 "Playfair Display",serif;margin:0 0 8px;max-width:330px}.playlist p{font-size:12px;color:var(--muted);margin:0}
+.about{position:relative;min-height:650px;display:flex;align-items:center;overflow:hidden}.about:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,8,6,.9),rgba(10,8,6,.65) 42%,rgba(10,8,6,.62)),linear-gradient(0deg,rgba(10,8,6,.75),rgba(10,8,6,.18)),url("assets/Slowbar.webp") center/cover no-repeat}.about-inner{position:relative;z-index:1;display:grid;grid-template-columns:.75fr 1.25fr;gap:70px}.about-quote{font:500 clamp(35px,4.4vw,62px)/1.04 "Playfair Display",serif}.about-copy{font-size:15px;color:#ddd3c7;max-width:720px}.about-copy p{margin:0 0 16px}.about-copy strong{color:var(--ink)}
+.contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}.contact h2{font:600 clamp(40px,5vw,64px)/1.03 "Playfair Display",serif;margin:0 0 16px}.contact-copy p{color:var(--muted);max-width:510px}.form{display:grid;gap:14px}.field{display:grid;gap:6px}.field label{font-size:12px;color:var(--muted)}input,textarea{font:inherit;color:var(--ink);background:#171512;border:1px solid var(--line);border-radius:7px;padding:13px 14px;outline:none}input:focus,textarea:focus{border-color:var(--gold)}textarea{min-height:145px;resize:vertical}.form button{background:transparent;color:var(--ink);cursor:pointer;justify-self:start}
+.footer{padding:42px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.footer-in{display:flex;justify-content:space-between;gap:25px}.footer a:hover{color:var(--ink)}
+.modal{position:fixed;inset:0;background:rgba(7,6,5,.78);backdrop-filter:blur(8px);z-index:100;display:none;align-items:center;justify-content:center;padding:25px}.modal.open{display:flex}.modal-box{width:min(680px,100%);max-height:85vh;overflow:auto;background:#191714;border:1px solid #51483d;padding:30px;position:relative}.close{position:absolute;right:16px;top:12px;background:none;border:0;color:var(--muted);font-size:24px;cursor:pointer}.modal h3{font:500 38px/1.05 "Playfair Display",serif;margin:5px 0 12px}.modal p{color:var(--muted)}.tracklist{display:grid;gap:9px;margin-top:22px}.track{display:flex;justify-content:space-between;gap:20px;padding:10px 0;border-bottom:1px solid var(--line);font-size:13px}.track a{color:var(--gold)}
+@media(max-width:900px){.wrap{width:min(calc(100% - 32px),var(--max))}.navlinks{display:none}.menu{display:block;color:var(--muted);font-size:12px}.hero{min-height:82vh}.hero:before{background:linear-gradient(90deg,rgba(10,8,6,.92),rgba(10,8,6,.5)),linear-gradient(0deg,rgba(10,8,6,.84),transparent 50%),url("assets/CoffeShop-Typing(1).webp") left center/cover no-repeat}.hero-content{width:72%;padding-top:110px;transform:none}.music-option,.about-inner,.contact{grid-template-columns:1fr}.about{min-height:760px}.about-inner{gap:35px}.music-option{gap:28px}.music-grid{grid-template-columns:repeat(2,1fr)}.stories-grid{grid-template-columns:repeat(2,1fr)}.playlists{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:580px){.wrap{width:calc(100% - 28px)}.logo{width:104px}.hero-content{width:94%}.hero h1{font-size:52px}.lead{font-size:15px}.section-head{display:block}.section-head .sub{margin-top:12px}.music-grid,.stories-grid,.playlists{grid-template-columns:1fr}.music-option{padding:26px 0}.music-art{aspect-ratio:1.5/1}.story{height:270px}.about{min-height:900px}.about:before{background:linear-gradient(90deg,rgba(10,8,6,.92),rgba(10,8,6,.72)),linear-gradient(0deg,rgba(10,8,6,.85),transparent),url("assets/Slowbar.webp") center/cover no-repeat}.about-quote{font-size:40px}.footer-in{display:block}.footer-in div+div{margin-top:10px}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-in">
+<a class="logo" href="#home"><img src="assets/Sip&Groove.webp" alt="Sip&Groove"></a>
+<nav class="navlinks"><a href="#home" class="active">Home</a><a href="#music">Music</a><a href="#stories">Stories</a><a href="#playlist">Playlist</a><a href="#about">About</a><a href="#hello">Say Hello</a></nav>
+<div class="menu">Menu</div>
+</div></header>
+
+<main id="home">
+<section class="hero"><div class="wrap hero-content">
+<div class="eyebrow">Urban Music Inspired By Real Life In Jakarta</div>
+<h1>Sounds For The Everyday.</h1>
+<p class="lead">Workdays, coffee breaks, crowded commutes, after-office hours, weekend escapes, and all the little dramas in between.</p>
+<a class="btn" href="#music">Play The Groove <span>↗</span></a>
+</div></section>
+
+<section id="music"><div class="wrap">
+<div class="music-option">
+<div class="music-intro"><div class="kicker">Music</div><h3>Songs For The Everyday.</h3><p>24 songs inspired by everyday life in Jakarta. Press play. Let the stories in the songs find you.</p><a class="btn" href="#musicGrid">Browse All Songs ↗</a></div>
+<div class="feature-art"><img id="featuredArt" src="assets/artwork/Hari Berputar.webp" alt="Hari Berputar artwork"></div>
+<div class="feature-info"><div class="kicker">Featured Track</div><div class="feature-number" id="featuredNumber">01</div><h3 id="featuredTitle">Hari Berputar</h3><p id="featuredDesc">Same City. Different Day. Keep Moving.</p><a class="btn" id="featuredLink" href="https://youtu.be/YiU-pwhjh0k" target="_blank" rel="noopener">Play On YouTube ↗</a><div class="feature-selectors" id="featureSelectors"></div></div>
+</div>
+<div class="music-browse"><div class="section-head"><div><div class="kicker">All Songs</div><h2>Find Your Everyday Groove.</h2></div><div class="filter-row"><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="released">Released</button></div></div></div>
+<div class="music-grid" id="musicGrid"></div></div>
+</div></section>
+
+<section id="stories"><div class="wrap">
+<div class="section-head"><div><div class="kicker">Stories</div><h2>Little Stories From The City</h2></div><p class="sub">Small observations from Jakarta, the people around us, and the everyday moments behind the music.</p></div>
+<div class="stories-grid" id="storiesGrid"></div>
+</div></section>
+
+<section id="playlist"><div class="wrap">
+<div class="section-head"><div><div class="kicker">Playlist</div><h2>Pick A Mood. Press Play.</h2></div><p class="sub">Different days. Different moods. Same city. Tap a mood to see the tracks.</p></div>
+<div class="playlists" id="playlistGrid"></div>
+</div></section>
+
+<section id="about" class="about"><div class="wrap about-inner">
+<div class="about-quote">Music For The<br>Everyday Life.</div>
+<div><div class="kicker">About Sip&Groove</div>
+<div class="about-copy">
+<p>Sip&Groove is urban music inspired by everyday life in Jakarta — the crowded mornings, endless meetings, coffee breaks, traffic, paydays, quiet nights, weekend escapes, and all the little dramas in between.</p>
+<p>We turn those moments into songs.</p>
+<p>Not because we have all the answers. Not to tell you how life should be lived. Just to share the mood, the stories, and the little things we all go through.</p>
+<p>Jakarta is our backdrop, but the feelings are universal. The pressure, the excitement, the boredom, the small wins, the bad days, the “ya udah, jalanin aja” moments — chances are, you've been there too.</p>
+<p>Sip&Groove is made with the help of AI, but the stories behind the music come from real moments, real observations, and everyday experiences happening around us.</p>
+<p>So take what feels familiar. Find something good in it. And keep moving.</p>
+<p><strong>Life Goes On. Let's Groove Along.</strong></p>
+</div></div>
+</div></section>
+
+<section id="hello"><div class="wrap contact">
+<div class="contact-copy"><div class="kicker">Say Hello</div><h2>Got Something To Say?</h2><p>Maybe You Have A Question. Maybe You Want To Collaborate. Maybe You Just Found A Song That Felt A Little Too Familiar.</p><p>Whatever It Is, Drop Us A Line.</p></div>
+<form class="form" action="https://formspree.io/f/REPLACE_ME" method="POST">
+<div class="field"><label>Name</label><input name="name" placeholder="Your Name" required></div>
+<div class="field"><label>Email</label><input type="email" name="email" placeholder="Your Email" required></div>
+<div class="field"><label>Message</label><textarea name="message" placeholder="Tell Us What's On Your Mind" required></textarea></div>
+<button class="btn" type="submit">Send Message ↗</button>
+</form></div></section>
+</main>
+<footer class="footer"><div class="wrap footer-in"><div>Sip&Groove — Sounds For The Everyday.</div><div><a href="#music">Music</a> · <a href="#stories">Stories</a> · <a href="#playlist">Playlist</a> · <a href="#about">About</a> · <a href="#hello">Say Hello</a></div></div></footer>
+
+<div class="modal" id="modal"><div class="modal-box"><button class="close" id="close">×</button><div id="modalContent"></div></div></div>
+<script>
+const A="assets/";
+const songs=[["Three Little Dots... Three Thousand Thoughts.", "When Three Little Dots Can Mean A Thousand Things.", "Three Little Dots.webp", true, ""], ["Running Dulu", "Sometimes You Just Need To Get Out And Move.", "Running dulu.webp", true, ""], ["Tomorrow Can Wait", "Some Things Can Wait. Tonight Doesn't Have To.", "Tomorow Cant Wait.webp", true, "https://www.youtube.com/watch?v=FucKzOIyz-w"], ["Maybe Next Month", "Not Everything Has To Happen Right Now.", "maybe next month.webp", true, ""], ["This Is The Way", "Another Day. Another Route. Keep Going.", "This Is The Way.webp", true, ""], ["I Show Your Art Tonight", "When Work Finally Turns Into Something You Can Be Proud Of.", "I Show Your Art Tonight.webp", true, ""], ["Tap Card Error After Midnight", "Even Jakarta Has Its Little Plot Twists.", "Tap Card Error after midninght.webp", true, ""], ["Padel After Office Di Jakarta Be Like", "Clock Out. Pick Up The Racket. Let's Go.", "Padel After Office.webp", true, ""], ["Rain In Blok M", "When The City Suddenly Slows Down.", "Rain in Blok M.webp", true, ""], ["Pulang Tenggo Never Felt This Good", "That Rare Feeling When You Actually Leave On Time.", "Pulang Tenggo Never Felt This Good.webp", true, ""], ["How’s Your Day Been?", "Sometimes A Simple Question Is Enough.", "Hows Your Day Been.webp", true, ""], ["See You Monday", "Friday Is Over. But The Weekend Is Just Getting Started.", "See You Monday.webp", true, ""], ["Zoom Bentar Ya", "It Was Supposed To Be A Quick Call.", "Zoom Bentar ya.webp", true, "https://www.youtube.com/watch?v=YSfOetVIUVw"], ["Payday Comes And Goes", "One Notification. One Moment Of Happiness.", "Payday Comes and Goes.webp", true, "https://www.youtube.com/watch?v=6Hc4Tp9PsTg"], ["Rumput Tetangga", "Somehow Everyone Else's Life Looks Better.", "Rumput Tetangga.webp", true, ""], ["Kerja Aja", "Some Days, That's Really All You Can Do.", "Kerja aja.webp", true, ""], ["Scroll Lagi", "One More Scroll. Then One More.", "Scroll Lagi.webp", true, "https://www.youtube.com/watch?v=L7O8-NEEU7g"], ["After Office", "The Day Doesn't Have To End When Work Does.", "After Office.webp", true, "https://www.youtube.com/watch?v=k9SS2I9v8UU"], ["Lanjut Lagi", "Tomorrow, We Go Again.", "Lanjut Lagi.webp", true, ""], ["Ojek Online Save My Day", "When Your Ride Shows Up At Exactly The Right Time.", "Ojek Online Save My Day.webp", true, ""], ["Hari Berputar", "Same City. Different Day. Keep Moving.", "Hari Berputar.webp", true, "https://youtu.be/YiU-pwhjh0k"], ["Tarik Napas", "Stop For A Second. Breathe. Then Continue.", "Tarik Napas.webp", true, ""], ["Jalan Pelan", "No Rush. Just Take The Long Way.", "Jalan Pelan.webp", true, ""], ["Pause Dulu, Take It Slow", "Sometimes Doing Less Is Exactly What You Need.", "Pause Dulu, Take it Slow.webp", true, ""]];
+function ytUrl(s){return s[4] || "https://www.youtube.com/results?search_query="+encodeURIComponent("Sip&Groove "+s[0]);}
+const grid=document.getElementById("musicGrid");
+function renderSongs(filter="all"){
+  grid.innerHTML=songs.map((s,i)=>{
+    const status="released";
+    if(filter!=="all"&&filter!==status)return "";
+    return `<article class="music-card"><div class="music-art"><img src="${A+"artwork/"+s[2]}" alt="${s[0]} artwork" loading="lazy" decoding="async"><span class="num">${String(i+1).padStart(2,"0")}</span></div><div class="music-info"><div class="music-title">${s[0]}</div><div class="music-desc">${s[1]}</div>${`<a class="music-action" href="${ytUrl(s)}" target="_blank" rel="noopener">▶ Play On YouTube</a>`}</div></article>`;
+  }).join("");
+}
+function setFeatured(i){
+  const s=songs[i];
+  document.getElementById("featuredArt").src=A+"artwork/"+s[2];
+  document.getElementById("featuredArt").alt=s[0]+" artwork";
+  document.getElementById("featuredNumber").textContent=String(i+1).padStart(2,"0");
+  document.getElementById("featuredTitle").textContent=s[0];
+  document.getElementById("featuredDesc").textContent=s[1];
+  const link=document.getElementById("featuredLink");
+  link.href=ytUrl(s);link.textContent="Play On YouTube ↗";link.style.display="inline-flex";link.onclick=null;
+  document.querySelectorAll(".selector").forEach((b,n)=>b.classList.toggle("active",n===i));
+}
+const featureSelectors=document.getElementById("featureSelectors");
+featureSelectors.innerHTML=songs.map((s,i)=>`<button class="selector${i===20?" active":""}" type="button" data-index="${i}">${String(i+1).padStart(2,"0")}</button>`).join("");
+document.querySelectorAll(".selector").forEach(b=>b.onclick=()=>setFeatured(Number(b.dataset.index)));
+setFeatured(20);
+renderSongs();
+document.querySelectorAll(".filter").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderSongs(b.dataset.filter)});
+
+const stories=[
+["01","Little Things","Three Little Dots... Three Thousand Thoughts","We’ve All Been There. You’re Waiting For A Message From Someone You Really Want To Hear From. Then Suddenly: “typing...” And Somehow Your Mood Goes Up Instantly. They’re Replying! Finally!\n\nThen It Disappears. No Message. A Few Minutes Later, “typing...” Again. Your Brain Is Happy Again. And Then — Gone. This Time, The Overthinking Starts. Are They Annoyed? Did They Change Their Mind? Did I Say Something Weird?\n\nTwenty Minutes Later, The Reply Finally Comes: “Hayu.” That’s It. One Word. Somehow, It Took Your Brain On A Three-Season Netflix Drama.","stories/01-three-little-dots.webp"],
+["02","Jakarta, Every Day","The 8:17 MRT","There’s Something About The 8:17 MRT. Same Station. Same Escalator. Same People Looking At Their Phones Like They’re Already In A Meeting.\n\nSomeone’s Holding Coffee. Someone’s Still Half Asleep. Someone Is Definitely Replying To A Work Chat They Should Have Answered Ten Minutes Ago. Then The Doors Close, The Train Moves, And Everyone Goes Quiet Again.\n\nNothing Special Really Happens. And Maybe That’s Exactly Why It Feels Familiar. Jakarta Has A Thousand Different Ways To Start A Workday — But Somehow, A Lot Of Us Start It The Same Way.","stories/02-the-817-mrt.webp"],
+["03","Stories Behind The Songs","Zoom Bentar Ya","“Zoom Bentar Ya.” Probably One Of The Most Dangerous Sentences In Office Life.\n\nIt Usually Starts Innocently. One Quick Call. Five Minutes. Ten, Max. Then Someone Says, “Since We’re All Here...” Another Person Shares Their Screen. Someone Else Says, “Actually, There’s One More Thing.” Suddenly You’re Looking At The Clock And Wondering How A Quick Call Became A Full Meeting.\n\nThe Funny Part? We’ve All Said It Ourselves. Sometimes We Really Mean Five Minutes. Sometimes We’re Just Hoping It Will Be Five Minutes.","stories/03-zoom-bentar-ya.webp"],
+["04","Weekend Mode","Running Dulu","After Five Days Of Sitting, Meetings, Screens, And Probably Too Much Coffee, Saturday Morning Feels Different.\n\nYou Don’t Need A Race. You Don’t Need A Training Plan. Sometimes You Just Put On Your Shoes, Step Outside, And Run Dulu. The First Ten Minutes Might Feel Terrible. Then Somewhere Between The Second Coffee Shop And The Next Turn, Your Head Starts To Feel A Little Quieter.\n\nMaybe That’s The Real Point. Not Getting Faster. Just Getting Out Of The Chair.","stories/04-running-dulu.webp"],
+["05","Jakarta, Every Day","Rain In Blok M","Blok M In The Rain Has A Different Tempo. Cars Move Slower. Motorbikes Hide Under Whatever Roof They Can Find. People Suddenly Become Experts At Predicting Which Puddle Is Actually A Puddle And Which One Is A Small Swimming Pool.\n\nYou Wait A Little Longer For The Rain To Ease Up. Maybe Grab A Coffee. Maybe Check Your Phone. Maybe Just Watch Jakarta Being Jakarta From Under A Building Awning.\n\nFor Once, Nobody Seems In A Hurry. Well... Except The Delivery Riders.","stories/05-rain-in-blok-m.webp"],
+["06","Little Things","When Payday Finally Comes","There’s A Very Specific Kind Of Happiness When The Salary Notification Finally Appears. You Check Your Phone, Smile A Little, And Suddenly The Month Feels Much More Manageable.\n\nFor A Few Hours, Everything Seems Possible. Coffee? Sure. Dinner? Why Not. Maybe That Thing You’ve Been Eyeing Online? Hmm... Let’s See.\n\nThen The Bills Arrive. Rent. Electricity. Credit Card. Subscriptions You Forgot You Still Had. And Just Like That, Payday Becomes A Memory. At Least The Notification Was Nice While It Lasted.","stories/06-payday-comes-and-goes.webp"],
+["07","After Hours","After Office","There’s A Small Moment After You Leave The Office When The Day Feels Like It Belongs To You Again. The Laptop Is Closed. The Last Work Chat Can Wait. The Elevator Doors Open And Suddenly You’re Outside.\n\nMaybe You’re Meeting Friends. Maybe It’s Padel. Maybe Just Dinner Somewhere Near The Office And A Coffee Before Going Home. Nothing Extraordinary. Just A Few Hours That Don’t Belong To Your Calendar.\n\nFunny How Sometimes The Best Part Of The Day Starts After The Workday Ends.","stories/07-after-office.webp"],
+["08","Little Things","Pause Dulu, Take It Slow","Some Days Feel Like Everything Is Asking For Your Attention At The Same Time. Messages. Deadlines. Notifications. Meetings. Another Meeting About The Meeting.\n\nAnd Somewhere In The Middle Of It, You Realize You Haven’t Actually Stopped All Day. So You Put The Phone Down For A Minute. Take A Sip. Look Outside. Let The World Keep Moving Without You For A Moment.\n\nNothing Is Fixed. The Inbox Is Still There. Tomorrow Will Still Come. But At Least You’ve Given Your Brain A Little Room To Breathe.","stories/08-pause-dulu-take-it-slow.webp"]
+];
+const sg=document.getElementById("storiesGrid");
+sg.innerHTML=stories.map(s=>`<article class="story" style="--story:url('${A+s[4]}')" data-story="${s[0]}"><span class="num">${s[0]}</span><div class="story-content"><div class="kicker">${s[1]}</div><h3>${s[2]}</h3><p>${s[3].split("\n")[0]}</p><a class="read" href="#">Read Story ↗</a></div></article>`).join("");
+
+const playlists=[
+["01","Morning","Coffee Before The First Meeting","Slow Start · Fresh Coffee · Jakarta Morning",["Jalan Pelan","Tarik Napas","Hari Berputar","See You Monday"]],
+["02","Work","Office Survival","Deadlines · Meetings · Three Little Dots",["Kerja Aja","Zoom Bentar Ya","Scroll Lagi","Three Little Dots... Three Thousand Thoughts","Payday Comes And Goes"]],
+["03","After Hours","After Office","Clock Out · Meet Friends · Stay A Little Longer",["After Office","Padel After Office Di Jakarta Be Like","Pulang Tenggo Never Felt This Good","Ojek Online Save My Day","Lanjut Lagi"]],
+["04","Rainy Day","Jakarta After Rain","Wet Streets · Blok M · Slow Traffic",["Rain In Blok M","Jalan Pelan","Pause Dulu, Take It Slow","Hari Berputar"]],
+["05","Weekend","Weekend Mode","No Meetings · No Rush · Just Go",["Running Dulu","Tomorrow Can Wait","Maybe Next Month","This Is The Way"]],
+["06","Late Night","Late Night Thoughts","Quiet Streets · Open Tabs · Too Many Thoughts",["Three Little Dots... Three Thousand Thoughts.","Rumput Tetangga","Tomorrow Can Wait","Tarik Napas","Pause Dulu, Take It Slow"]]
+];
+const pg=document.getElementById("playlistGrid");
+pg.innerHTML=playlists.map((p,i)=>`<article class="playlist" data-playlist="${i}"><div class="kicker">${p[0]} / ${p[1]}</div><h3>${p[2]}</h3><p>${p[3]}</p></article>`).join("");
+
+const modal=document.getElementById("modal"), mc=document.getElementById("modalContent");
+function openModal(html){mc.innerHTML=html;modal.classList.add("open")}
+document.getElementById("close").onclick=()=>modal.classList.remove("open");
+modal.onclick=e=>{if(e.target===modal)modal.classList.remove("open")};
+document.querySelectorAll(".playlist").forEach((el,i)=>el.onclick=()=>{const p=playlists[i];openModal(`<div class="kicker">${p[0]} / ${p[1]}</div><h3>${p[2]}</h3><p>${p[3]}</p><div class="tracklist">${p[4].map((t,n)=>`<div class="track"><span>${String(n+1).padStart(2,"0")} · ${t}</span><span style="color:var(--muted)">Track</span></div>`).join("")}</div><a class="btn" href="#music" onclick="modal.classList.remove('open')">Browse The Music ↗</a>`)});
+document.querySelectorAll(".story").forEach((el,i)=>el.onclick=e=>{if(e.target.tagName==="A")e.preventDefault();const s=stories[i];openModal(`<div class="story-full"><div class="kicker">${s[1]}</div><h3>${s[2]}</h3>${s[3].split("\n").map((p,n)=>`<p class="${n===0?"story-lead":""}">${p}</p>`).join("")}<a class="btn" href="#music" onclick="modal.classList.remove('open')">Find The Song ↗</a></div>`)});
+
+const sections=[...document.querySelectorAll("main section[id]")];
+const links=[...document.querySelectorAll(".navlinks a")];
+window.addEventListener("scroll",()=>{let current="home";sections.forEach(s=>{if(scrollY>=s.offsetTop-180)current=s.id});links.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+current))});
+</script>
+</body>
+</html>
